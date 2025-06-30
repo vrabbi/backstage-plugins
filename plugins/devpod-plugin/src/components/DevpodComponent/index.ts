@@ -1,1 +1,0 @@
-export { isDevpodAvailable, DevpodComponent } from './DevpodComponent';
