@@ -1,4 +1,5 @@
 site_name: TeraSky OSS Backstage Plugins
+site_url: https://vrabbi.github.io/backstage-plugins
 nav:
   - Overview: index.md
   - Plugins:
