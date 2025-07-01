@@ -73,6 +73,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#kubernetes-resources-plugin" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -955,6 +960,21 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -967,6 +987,103 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Features
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#plugin-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      Plugin Components
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Plugin Components">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#frontend-plugin" class="md-nav__link">
+    <span class="md-ellipsis">
+      Frontend Plugin
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#backend-plugin" class="md-nav__link">
+    <span class="md-ellipsis">
+      Backend Plugin
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#screenshots" class="md-nav__link">
+    <span class="md-ellipsis">
+      Screenshots
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#available-permissions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Available Permissions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#documentation-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Documentation Structure
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting Started
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -3052,6 +3169,94 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Features
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#plugin-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      Plugin Components
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Plugin Components">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#frontend-plugin" class="md-nav__link">
+    <span class="md-ellipsis">
+      Frontend Plugin
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#backend-plugin" class="md-nav__link">
+    <span class="md-ellipsis">
+      Backend Plugin
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#screenshots" class="md-nav__link">
+    <span class="md-ellipsis">
+      Screenshots
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#available-permissions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Available Permissions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#documentation-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Documentation Structure
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting Started
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -3083,9 +3288,72 @@
   
 
 
-  <h1>Overview</h1>
-
-
+<h1 id="kubernetes-resources-plugin">Kubernetes Resources Plugin</h1>
+<p>The Kubernetes Resources plugin provides a powerful visualization and management interface for Kubernetes resources within Backstage. It enables users to explore resource relationships, view configurations, and monitor cluster events through an intuitive graphical interface.</p>
+<h2 id="features">Features</h2>
+<ul>
+<li><strong>Interactive Resource Graph</strong>: Visualize relationships between Kubernetes resources</li>
+<li><strong>YAML Manifest Viewer</strong>: View and copy resource configurations</li>
+<li><strong>Event Monitoring</strong>: Track Kubernetes events for specific resources</li>
+<li><strong>Resource Dependencies</strong>: Map and explore resource relationships</li>
+<li><strong>Permission Controls</strong>: Fine-grained access control for different resource types</li>
+<li><strong>Multi-Cluster Support</strong>: View resources across multiple Kubernetes clusters</li>
+</ul>
+<h2 id="plugin-components">Plugin Components</h2>
+<h3 id="frontend-plugin">Frontend Plugin</h3>
+<p>The plugin provides frontend components for:
+- Resource graph visualization
+- YAML manifest viewing
+- Event monitoring
+- Resource exploration</p>
+<p><a href="../frontend/about/">Learn more about the frontend plugin</a></p>
+<h3 id="backend-plugin">Backend Plugin</h3>
+<p>The plugin requires a backend deployment that:
+- Aggregates resource data
+- Tracks dependencies
+- Manages permissions
+- Handles cluster communication</p>
+<p><a href="../backend/about/">Learn more about the backend plugin</a></p>
+<h2 id="screenshots">Screenshots</h2>
+<p><img alt="Graph View" src="../../../images/k8s-resource-graph.png" />
+<em>Interactive resource dependency graph</em></p>
+<p><img alt="Events And YAML" src="../../../images/k8s-graph-yaml-and-events-view.png" />
+<em>Resource events and YAML configuration view</em></p>
+<p><img alt="Table View" src="../../../images/k8s-table-view.png" />
+<em>Table view of Kubernetes resources</em></p>
+<p><img alt="No Permissions" src="../../../images/k8s-no-permissions.png" />
+<em>Permission-based access control</em></p>
+<h2 id="available-permissions">Available Permissions</h2>
+<p>The plugin supports the following permissions:</p>
+<ul>
+<li><code>kubernetes-resources.resources.list</code>: List and view Kubernetes resources</li>
+<li><code>kubernetes-resources.secrets.list</code>: List and view Secret resources</li>
+<li><code>kubernetes-resources.secrets.view-yaml</code>: View Secret YAML content</li>
+<li><code>kubernetes-resources.yaml.view</code>: View resource YAML content</li>
+<li><code>kubernetes-resources.events.show</code>: View resource events</li>
+<li><code>kubernetes-resources.graph.show</code>: View resource dependency graph</li>
+</ul>
+<h2 id="documentation-structure">Documentation Structure</h2>
+<ul>
+<li>Frontend Plugin</li>
+<li><a href="../frontend/about/">About</a></li>
+<li><a href="../frontend/install/">Installation</a></li>
+<li><a href="../frontend/configure/">Configuration</a></li>
+<li>Backend Plugin</li>
+<li><a href="../backend/about/">About</a></li>
+<li><a href="../backend/install/">Installation</a></li>
+<li><a href="../backend/configure/">Configuration</a></li>
+</ul>
+<h2 id="getting-started">Getting Started</h2>
+<p>To get started with the Kubernetes Resources plugin:</p>
+<ol>
+<li>Deploy the backend component to your clusters</li>
+<li>Install the frontend plugin</li>
+<li>Configure proxy settings</li>
+<li>Set up entity annotations</li>
+<li>Configure permissions (optional)</li>
+</ol>
+<p>For detailed installation and configuration instructions, refer to the frontend and backend documentation linked above. </p>
 
 
 
