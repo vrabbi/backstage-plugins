@@ -593,6 +593,30 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#using-the-community-rbac-plugin" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using the Community RBAC Plugin
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Using the Community RBAC Plugin">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-via-csv-and-config" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example via CSV and config
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#best-practices" class="md-nav__link">
     <span class="md-ellipsis">
       Best Practices
@@ -2383,29 +2407,6 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../scaffolder-actions/backend/configure/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Configure
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -3316,6 +3317,30 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#using-the-community-rbac-plugin" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using the Community RBAC Plugin
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Using the Community RBAC Plugin">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-via-csv-and-config" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example via CSV and config
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#best-practices" class="md-nav__link">
     <span class="md-ellipsis">
       Best Practices
@@ -3443,22 +3468,56 @@
 </span></code></pre></div>
 <h2 id="permission-policy-configuration">Permission Policy Configuration</h2>
 <p>You can configure permission policies in your Backstage permission policy file. Here's an example policy that grants all Crossplane permissions to a specific role:</p>
-<p>```typescript
-// packages/backend/src/plugins/permission.ts
-import { CrossplanePermission } from '@terasky/backstage-plugin-crossplane-common';</p>
-<p>class CrossplanePermissionPolicy implements PermissionPolicy {
-  async handle(
-    request: PolicyQuery,
-    user?: BackstageIdentityResponse,
-  ): Promise<PolicyDecision> {
-    if (isPermission(request.permission, CrossplanePermission)) {
-      // Implement your permission logic here
-      return { result: AuthorizeResult.ALLOW };
-    }</p>
-<div class="language-text highlight"><pre><span></span><code>return { result: AuthorizeResult.DENY };
-</code></pre></div>
-<p>}
-}</p>
+<div class="language-typescript highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">// packages/backend/src/plugins/permission.ts</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">CrossplanePermission</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;@terasky/backstage-plugin-crossplane-common&#39;</span><span class="p">;</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="kd">class</span><span class="w"> </span><span class="nx">CrossplanePermissionPolicy</span><span class="w"> </span><span class="k">implements</span><span class="w"> </span><span class="nx">PermissionPolicy</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">  </span><span class="k">async</span><span class="w"> </span><span class="nx">handle</span><span class="p">(</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="nx">request</span><span class="o">:</span><span class="w"> </span><span class="kt">PolicyQuery</span><span class="p">,</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">    </span><span class="nx">user?</span><span class="o">:</span><span class="w"> </span><span class="kt">BackstageIdentityResponse</span><span class="p">,</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">  </span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nb">Promise</span><span class="o">&lt;</span><span class="nx">PolicyDecision</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">isPermission</span><span class="p">(</span><span class="nx">request</span><span class="p">.</span><span class="nx">permission</span><span class="p">,</span><span class="w"> </span><span class="nx">CrossplanePermission</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">      </span><span class="c1">// Implement your permission logic here</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">result</span><span class="o">:</span><span class="w"> </span><span class="kt">AuthorizeResult.ALLOW</span><span class="w"> </span><span class="p">};</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">result</span><span class="o">:</span><span class="w"> </span><span class="kt">AuthorizeResult.DENY</span><span class="w"> </span><span class="p">};</span>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="p">}</span>
+</span></code></pre></div>
+<h2 id="using-the-community-rbac-plugin">Using the Community RBAC Plugin</h2>
+<p>You can also use the RBAC plugins from the backstage community and create roles via the UI or via a CSV file.</p>
+<h3 id="example-via-csv-and-config">Example via CSV and config</h3>
+<p><strong>app-config.yaml snippet</strong>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nt">permission</span><span class="p">:</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">  </span><span class="nt">rbac</span><span class="p">:</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="nt">policies-csv-file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/path/to/permissions.csv</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="nt">policyFileReload</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="nt">pluginsWithPermission</span><span class="p">:</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">kubernetes</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">crossplane</span>
+</span></code></pre></div></p>
+<p><strong>CSV file snippet</strong>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>p, role:default/platformteam, kubernetes.proxy, use, allow
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>p, role:default/platformteam, kubernetes.resources.read, read, allow
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>p, role:default/platformteam, kubernetes.clusters.read, read, allow
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>p, role:default/platformteam, crossplane.claims.list, read, allow
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>p, role:default/platformteam, crossplane.claims.view-yaml, read, allow
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>p, role:default/platformteam, crossplane.claims.show-events, read, allow
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>p, role:default/platformteam, crossplane.composite-resources.list, read, allow
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>p, role:default/platformteam, crossplane.composite-resources.view-yaml, read, allow
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>p, role:default/platformteam, crossplane.composite-resources.show-events, read, allow
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>p, role:default/platformteam, crossplane.managed-resources.list, read, allow
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>p, role:default/platformteam, crossplane.managed-resources.view-yaml, read, allow
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>p, role:default/platformteam, crossplane.managed-resources.show-events, read, allow
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>p, role:default/platformteam, crossplane.resource-graph.show, read, allow
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>p, role:default/platformteam, crossplane.overview.view, read, allow
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>p, role:default/platformteam, crossplane.additional-resources.list, read, allow
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>p, role:default/platformteam, crossplane.additional-resources.view-yaml, read, allow
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>p, role:default/platformteam, crossplane.additional-resources.show-events, read, allow
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>g, group:default/all_users, role:default/platformteam
+</span></code></pre></div></p>
 <h2 id="best-practices">Best Practices</h2>
 <h3 id="security">Security</h3>
 <ol>

@@ -73,6 +73,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#installing-the-vcf-automation-ingestor-plugin" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -2197,29 +2202,6 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../scaffolder-actions/backend/configure/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Configure
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -2973,6 +2955,21 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Install
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -2985,6 +2982,67 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation Steps
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation Steps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-install-the-plugin" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Install the Plugin
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-register-the-plugin" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Register the Plugin
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whats-next" class="md-nav__link">
+    <span class="md-ellipsis">
+      What's Next?
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -3054,6 +3112,58 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation Steps
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation Steps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-install-the-plugin" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Install the Plugin
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-register-the-plugin" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Register the Plugin
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whats-next" class="md-nav__link">
+    <span class="md-ellipsis">
+      What's Next?
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -3085,9 +3195,22 @@
   
 
 
-  <h1>Install</h1>
-
-
+<h1 id="installing-the-vcf-automation-ingestor-plugin">Installing the VCF Automation Ingestor Plugin</h1>
+<p>This guide will help you install and set up the VCF Automation Ingestor plugin in your Backstage instance.</p>
+<h2 id="installation-steps">Installation Steps</h2>
+<h3 id="1-install-the-plugin">1. Install the Plugin</h3>
+<p>Install the plugin package in your Backstage backend:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>yarn<span class="w"> </span>add<span class="w"> </span>--cwd<span class="w"> </span>packages/backend<span class="w"> </span>@terasky/backstage-plugin-vcf-automation-ingestor
+</span></code></pre></div>
+<h3 id="2-register-the-plugin">2. Register the Plugin</h3>
+<p>Import and register the plugin in your <code>packages/backend/index.ts</code>:</p>
+<div class="language-typescript highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nx">backend</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="k">import</span><span class="p">(</span><span class="s1">&#39;@terasky/backstage-plugin-vcf-automation-ingestor&#39;</span><span class="p">));</span>
+</span></code></pre></div>
+<h2 id="whats-next">What's Next?</h2>
+<ul>
+<li><a href="../configure/">Configure the plugin</a></li>
+<li><a href="../about/">Learn about the plugin's features</a></li>
+</ul>
 
 
 

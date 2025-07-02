@@ -73,6 +73,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#installing-the-kubernetes-resources-permissions-backend-plugin" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -1041,6 +1046,21 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Install
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -1053,6 +1073,151 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation Steps
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation Steps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-add-the-package" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Add the Package
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-add-to-backend" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Add to Backend
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-configure-permissions" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Configure Permissions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Verification
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Verification">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#testing-the-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testing the Installation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-backend-startup-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Backend Startup Issues
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-permission-framework-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Permission Framework Issues
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-integration-problems" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Integration Problems
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Next Steps
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2209,29 +2374,6 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../scaffolder-actions/backend/configure/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Configure
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -3054,6 +3196,142 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation Steps
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation Steps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-add-the-package" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Add the Package
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-add-to-backend" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Add to Backend
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-configure-permissions" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Configure Permissions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Verification
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Verification">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#testing-the-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testing the Installation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-backend-startup-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Backend Startup Issues
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-permission-framework-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Permission Framework Issues
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-integration-problems" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Integration Problems
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Next Steps
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -3085,9 +3363,90 @@
   
 
 
-  <h1>Install</h1>
-
-
+<h1 id="installing-the-kubernetes-resources-permissions-backend-plugin">Installing the Kubernetes Resources Permissions Backend Plugin</h1>
+<p>This guide will help you install and set up the kubernetes resources Permissions backend plugin in your Backstage instance.</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>Before installing the backend plugin, ensure you have:</p>
+<ol>
+<li>A working Backstage instance</li>
+<li>Node.js and npm/yarn installed</li>
+<li>Access to your Backstage backend configuration</li>
+<li>Deployed the required agent in the target kubernetes cluster following the <a href="https://github.com/TeraSky-OSS/kubernetes-dependency-tracker/blob/main/README.md">docs here</a></li>
+</ol>
+<h2 id="installation-steps">Installation Steps</h2>
+<h3 id="1-add-the-package">1. Add the Package</h3>
+<p>Install the backend plugin package using your package manager:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>yarn<span class="w"> </span>--cwd<span class="w"> </span>packages/backend<span class="w"> </span>add<span class="w"> </span>@terasky/backstage-plugin-kubernetes-resources-permissions-backend
+</span></code></pre></div>
+<h3 id="2-add-to-backend">2. Add to Backend</h3>
+<p>Modify your backend entry point (typically <code>packages/backend/src/index.ts</code>):</p>
+<div class="language-typescript highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">// In your backend initialization</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nx">backend</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="k">import</span><span class="p">(</span><span class="s1">&#39;@terasky/backstage-plugin-kubernetes-resources-permissions-backend&#39;</span><span class="p">));</span>
+</span></code></pre></div>
+<h3 id="3-configure-permissions">3. Configure Permissions</h3>
+<p>Add the following to your <code>app-config.yaml</code>:</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nt">permission</span><span class="p">:</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"> </span><span class="c1"># Enable Backstage permission framework</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="nt">kubernetesResources</span><span class="p">:</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">  </span><span class="nt">enablePermissions</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"> </span><span class="c1"># Enable Kubernetes permission checks</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="nt">proxy</span><span class="p">:</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">  </span><span class="s">&#39;/kubernetes-resources/&lt;CLUSTER</span><span class="nv"> </span><span class="s">NAME&gt;&#39;</span><span class="p p-Indicator">:</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">      </span><span class="nt">target</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;http://&lt;THE</span><span class="nv"> </span><span class="s">INGRESS</span><span class="nv"> </span><span class="s">URL</span><span class="nv"> </span><span class="s">OF</span><span class="nv"> </span><span class="s">THE</span><span class="nv"> </span><span class="s">DEPLOYED</span><span class="nv"> </span><span class="s">AGENT&gt;&#39;</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">      </span><span class="nt">changeOrigin</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">      </span><span class="nt">headers</span><span class="p">:</span>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">        </span><span class="nt">Authorization</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;Bearer</span><span class="nv"> </span><span class="s">&lt;SAME</span><span class="nv"> </span><span class="s">TOKEN</span><span class="nv"> </span><span class="s">AS</span><span class="nv"> </span><span class="s">IS</span><span class="nv"> </span><span class="s">USED</span><span class="nv"> </span><span class="s">IN</span><span class="nv"> </span><span class="s">THE</span><span class="nv"> </span><span class="s">K8S</span><span class="nv"> </span><span class="s">PLUGIN</span><span class="nv"> </span><span class="s">CONFIGURATION&gt;</span>
+</span></code></pre></div>
+<h2 id="verification">Verification</h2>
+<p>After installation, verify that:</p>
+<ol>
+<li>The plugin appears in your package.json dependencies</li>
+<li>The backend starts without errors</li>
+<li>Permission endpoints are accessible</li>
+<li>Integration with the frontend plugin works correctly</li>
+</ol>
+<h3 id="testing-the-installation">Testing the Installation</h3>
+<ol>
+<li>
+<p><strong>Check Backend Health</strong>
+   <div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>curl<span class="w"> </span>http://localhost:7007/api/kubernetes-resources/health
+</span></code></pre></div></p>
+</li>
+<li>
+<p><strong>Test Frontend Integration</strong></p>
+</li>
+<li>Open a kubernetes resource in the frontend</li>
+<li>Verify permission checks are working</li>
+<li>Check access control behavior</li>
+</ol>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<p>Common issues and solutions:</p>
+<h3 id="1-backend-startup-issues">1. Backend Startup Issues</h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># Check backend logs</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>yarn<span class="w"> </span>workspace<span class="w"> </span>backend<span class="w"> </span>start<span class="w"> </span>--verbose
+</span></code></pre></div>
+<h3 id="2-permission-framework-issues">2. Permission Framework Issues</h3>
+<ul>
+<li>Verify permission framework is enabled</li>
+<li>Check permission policy configuration</li>
+<li>Review backend plugin configuration</li>
+</ul>
+<h3 id="3-integration-problems">3. Integration Problems</h3>
+<ul>
+<li>Ensure frontend and backend versions match</li>
+<li>Check network connectivity</li>
+<li>Verify API endpoint configuration</li>
+</ul>
+<h2 id="next-steps">Next Steps</h2>
+<p>After successful installation:</p>
+<ol>
+<li>Configure permission policies</li>
+<li>Set up role-based access control</li>
+<li>Test with different user roles</li>
+<li>Monitor permission enforcement</li>
+</ol>
+<p>Proceed to the <a href="../configure/">Configuration Guide</a> for detailed setup instructions.</p>
 
 
 

@@ -2367,28 +2367,37 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#example-templates" class="md-nav__link">
+  <a href="#action-schemas" class="md-nav__link">
     <span class="md-ellipsis">
-      Example Templates
+      Action Schemas
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Example Templates">
+    <nav class="md-nav" aria-label="Action Schemas">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#crossplane-resource-template" class="md-nav__link">
+  <a href="#generic-crd-action-schema" class="md-nav__link">
     <span class="md-ellipsis">
-      Crossplane Resource Template
+      Generic CRD Action Schema
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#entity-cleanup-template" class="md-nav__link">
+  <a href="#crossplane-claim-action-schema" class="md-nav__link">
     <span class="md-ellipsis">
-      Entity Cleanup Template
+      Crossplane Claim Action Schema
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entity-cleanup-action-schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      Entity Cleanup Action Schema
     </span>
   </a>
   
@@ -2421,29 +2430,6 @@
   
   <span class="md-ellipsis">
     Install
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../configure/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Configure
     
   </span>
   
@@ -3436,28 +3422,37 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#example-templates" class="md-nav__link">
+  <a href="#action-schemas" class="md-nav__link">
     <span class="md-ellipsis">
-      Example Templates
+      Action Schemas
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Example Templates">
+    <nav class="md-nav" aria-label="Action Schemas">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#crossplane-resource-template" class="md-nav__link">
+  <a href="#generic-crd-action-schema" class="md-nav__link">
     <span class="md-ellipsis">
-      Crossplane Resource Template
+      Generic CRD Action Schema
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#entity-cleanup-template" class="md-nav__link">
+  <a href="#crossplane-claim-action-schema" class="md-nav__link">
     <span class="md-ellipsis">
-      Entity Cleanup Template
+      Crossplane Claim Action Schema
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entity-cleanup-action-schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      Entity Cleanup Action Schema
     </span>
   </a>
   
@@ -3602,70 +3597,57 @@
 <li>Format manifest</li>
 <li>Save to file</li>
 </ol>
-<h2 id="example-templates">Example Templates</h2>
-<h3 id="crossplane-resource-template">Crossplane Resource Template</h3>
-<div class="language-yaml highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">scaffolder.backstage.io/v1beta3</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Template</span>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="nt">metadata</span><span class="p">:</span>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">database-claim</span>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">  </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Create Database Claim</span>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="nt">spec</span><span class="p">:</span>
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">  </span><span class="nt">parameters</span><span class="p">:</span>
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Database Configuration</span>
-</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">      </span><span class="nt">properties</span><span class="p">:</span>
-</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">        </span><span class="nt">name</span><span class="p">:</span>
-</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">          </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Name</span>
-</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">          </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
-</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">        </span><span class="nt">size</span><span class="p">:</span>
-</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="w">          </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Size</span>
-</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="w">          </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
-</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="w">          </span><span class="nt">enum</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">small</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">medium</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">large</span><span class="p p-Indicator">]</span>
-</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="w">        </span><span class="nt">version</span><span class="p">:</span>
-</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="w">          </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Version</span>
-</span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="w">          </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
-</span><span id="__span-2-20"><a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="w">          </span><span class="nt">default</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;13&quot;</span>
-</span><span id="__span-2-21"><a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>
-</span><span id="__span-2-22"><a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a><span class="w">  </span><span class="nt">steps</span><span class="p">:</span>
-</span><span id="__span-2-23"><a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">generate-claim</span>
-</span><span id="__span-2-24"><a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a><span class="w">      </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Generate Database Claim</span>
-</span><span id="__span-2-25"><a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a><span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">terasky:claim-template</span>
-</span><span id="__span-2-26"><a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a><span class="w">      </span><span class="nt">input</span><span class="p">:</span>
-</span><span id="__span-2-27"><a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a><span class="w">        </span><span class="nt">cluster</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${{ parameters.cluster }}</span>
-</span><span id="__span-2-28"><a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a><span class="w">        </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${{ parameters.namespace }}</span>
-</span><span id="__span-2-29"><a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a><span class="w">        </span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PostgreSQLInstance</span>
-</span><span id="__span-2-30"><a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a><span class="w">        </span><span class="nt">parameters</span><span class="p">:</span>
-</span><span id="__span-2-31"><a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a><span class="w">          </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${{ parameters.name }}</span>
-</span><span id="__span-2-32"><a id="__codelineno-2-32" name="__codelineno-2-32" href="#__codelineno-2-32"></a><span class="w">          </span><span class="nt">size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${{ parameters.size }}</span>
-</span><span id="__span-2-33"><a id="__codelineno-2-33" name="__codelineno-2-33" href="#__codelineno-2-33"></a><span class="w">          </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${{ parameters.version }}</span>
+<h2 id="action-schemas">Action Schemas</h2>
+<h3 id="generic-crd-action-schema">Generic CRD Action Schema</h3>
+<div class="language-typescript highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nx">schema</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="nx">input</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="nx">ownerParam</span><span class="o">:</span><span class="w"> </span><span class="kt">z</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">z</span><span class="p">.</span><span class="nx">any</span><span class="p">(),</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="nx">parameters</span><span class="o">:</span><span class="w"> </span><span class="kt">z</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">z</span><span class="p">.</span><span class="nx">record</span><span class="p">(</span><span class="nx">z</span><span class="p">.</span><span class="nx">any</span><span class="p">()),</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="nx">nameParam</span><span class="o">:</span><span class="w"> </span><span class="kt">z</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">z</span><span class="p">.</span><span class="kt">string</span><span class="p">(),</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="nx">namespaceParam</span><span class="o">:</span><span class="w"> </span><span class="kt">z</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">z</span><span class="p">.</span><span class="kt">string</span><span class="p">().</span><span class="nx">optional</span><span class="p">(),</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">    </span><span class="nx">excludeParams</span><span class="o">:</span><span class="w"> </span><span class="kt">z</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">z</span><span class="p">.</span><span class="nx">array</span><span class="p">(</span><span class="nx">z</span><span class="p">.</span><span class="kt">string</span><span class="p">()),</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">    </span><span class="nx">apiVersion</span><span class="o">:</span><span class="w"> </span><span class="kt">z</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">z</span><span class="p">.</span><span class="kt">string</span><span class="p">(),</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">    </span><span class="nx">kind</span><span class="o">:</span><span class="w"> </span><span class="kt">z</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">z</span><span class="p">.</span><span class="kt">string</span><span class="p">(),</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">    </span><span class="nx">removeEmptyParams</span><span class="o">:</span><span class="w"> </span><span class="kt">z</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">z</span><span class="p">.</span><span class="kt">boolean</span><span class="p">().</span><span class="nx">optional</span><span class="p">(),</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">    </span><span class="nx">clusters</span><span class="o">:</span><span class="w"> </span><span class="kt">z</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">z</span><span class="p">.</span><span class="nx">array</span><span class="p">(</span><span class="nx">z</span><span class="p">.</span><span class="kt">string</span><span class="p">()).</span><span class="nx">min</span><span class="p">(</span><span class="mf">1</span><span class="p">),</span>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">  </span><span class="p">},</span>
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">  </span><span class="nx">output</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="w">    </span><span class="nx">manifest</span><span class="o">:</span><span class="w"> </span><span class="kt">z</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">z</span><span class="p">.</span><span class="kt">string</span><span class="p">(),</span>
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="w">    </span><span class="nx">filePaths</span><span class="o">:</span><span class="w"> </span><span class="kt">z</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">z</span><span class="p">.</span><span class="nx">array</span><span class="p">(</span><span class="nx">z</span><span class="p">.</span><span class="kt">string</span><span class="p">()),</span>
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="w">  </span><span class="p">},</span>
+</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="p">}</span>
 </span></code></pre></div>
-<h3 id="entity-cleanup-template">Entity Cleanup Template</h3>
-<div class="language-yaml highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">scaffolder.backstage.io/v1beta3</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Template</span>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="nt">metadata</span><span class="p">:</span>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">git-entity-prep</span>
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">  </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Prepare Entity for Git</span>
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="nt">spec</span><span class="p">:</span>
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">  </span><span class="nt">steps</span><span class="p">:</span>
-</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">fetch-entity</span>
-</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">      </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Fetch Current Entity</span>
-</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">catalog:fetch</span>
-</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">      </span><span class="nt">input</span><span class="p">:</span>
-</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">        </span><span class="nt">entityRef</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${{ parameters.entityRef }}</span>
-</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>
-</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">clean-entity</span>
-</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="w">      </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Clean Entity Manifest</span>
-</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">terasky:catalog-info-cleaner</span>
-</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="w">      </span><span class="nt">input</span><span class="p">:</span>
-</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="w">        </span><span class="nt">entity</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${{ steps.fetch-entity.output.entity }}</span>
-</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>
-</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">publish</span>
-</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a><span class="w">      </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Publish to Git</span>
-</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a><span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">publish:github</span>
-</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a><span class="w">      </span><span class="nt">input</span><span class="p">:</span>
-</span><span id="__span-3-24"><a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a><span class="w">        </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./catalog-info.yaml</span>
-</span><span id="__span-3-25"><a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a><span class="w">        </span><span class="nt">repoUrl</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${{ parameters.repoUrl }}</span>
+<h3 id="crossplane-claim-action-schema">Crossplane Claim Action Schema</h3>
+<div class="language-typescript highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nx">schema</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="nx">input</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="nx">parameters</span><span class="o">:</span><span class="w"> </span><span class="kt">z</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">z</span><span class="p">.</span><span class="nx">record</span><span class="p">(</span><span class="nx">z</span><span class="p">.</span><span class="nx">any</span><span class="p">()).</span><span class="nx">describe</span><span class="p">(</span><span class="s1">&#39;Pass through of input parameters&#39;</span><span class="p">),</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="nx">nameParam</span><span class="o">:</span><span class="w"> </span><span class="kt">z</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">z</span><span class="p">.</span><span class="kt">string</span><span class="p">().</span><span class="nx">describe</span><span class="p">(</span><span class="s1">&#39;Template parameter to map to the name of the claim&#39;</span><span class="p">).</span><span class="nx">defaultName</span><span class="s1">&#39;),</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="s1">    namespaceParam: z =&gt; z.string().describe(&#39;</span><span class="nx">Template</span><span class="w"> </span><span class="nx">parameter</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">map</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">namespace</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">claim</span><span class="s1">&#39;).ult(&#39;</span><span class="nx">xrNamespace</span><span class="s1">&#39;),</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="s1">    excludeParams: z =&gt; z.array(z.string()).describe(&#39;</span><span class="nx">Template</span><span class="w"> </span><span class="nx">parameters</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">exclude</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">claim</span><span class="s1">&#39;).ult([&#39;</span><span class="nx">xrName</span><span class="s1">&#39;, &#39;</span><span class="nx">xrNamespace</span><span class="s1">&#39;, &#39;</span><span class="nx">clusters</span><span class="s1">&#39;, &#39;</span><span class="nx">targetBranch</span><span class="s1">&#39;, &#39;</span><span class="nx">repoUrl</span><span class="s1">&#39;, &#39;</span><span class="nx">_editData</span><span class="s1">&#39;]),</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="s1">    apiVersion: z =&gt; z.string().describe(&#39;</span><span class="nx">API</span><span class="w"> </span><span class="nx">Version</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">claim</span><span class="s1">&#39;),</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="s1">    kind: z =&gt; z.string().describe(&#39;</span><span class="nx">Kind</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">claim</span><span class="s1">&#39;),</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="s1">    clusters: z =&gt; z.array(z.string()).min(1).describe(&#39;</span><span class="nx">The</span><span class="w"> </span><span class="nx">target</span><span class="w"> </span><span class="nx">clusters</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">apply</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">resource</span><span class="w"> </span><span class="nx">to</span><span class="s1">&#39;),</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="s1">    removeEmptyParams: z =&gt; z.boolean().describe(&#39;</span><span class="nx">If</span><span class="w"> </span><span class="nx">set</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"> </span><span class="nx">empty</span><span class="w"> </span><span class="nx">parameters</span><span class="w"> </span><span class="nx">will</span><span class="w"> </span><span class="nx">be</span><span class="w"> </span><span class="nx">rendered</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nx">manifest</span><span class="p">.</span><span class="w"> </span><span class="nx">by</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="nx">they</span><span class="w"> </span><span class="nx">are</span><span class="w"> </span><span class="nx">removed</span><span class="s1">&#39;).default(true),</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="s1">    ownerParam: z =&gt; z.string().describe(&#39;</span><span class="nx">Template</span><span class="w"> </span><span class="nx">parameter</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">map</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">owner</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">claim</span><span class="s1">&#39;),</span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="s1">  },</span>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="s1">  output: {</span>
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="s1">    manifest: z =&gt; z.string().describe(&#39;</span><span class="nx">The</span><span class="w"> </span><span class="nx">templated</span><span class="w"> </span><span class="nx">Kubernetes</span><span class="w"> </span><span class="nx">resource</span><span class="w"> </span><span class="nx">manifest</span><span class="s1">&#39;),</span>
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="s1">    filePaths: z =&gt; z.array(z.string()).describe(&#39;</span><span class="nx">The</span><span class="w"> </span><span class="nx">file</span><span class="w"> </span><span class="nx">paths</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">written</span><span class="w"> </span><span class="nx">manifests</span><span class="err">&#39;</span><span class="p">),</span>
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="w">  </span><span class="p">},</span>
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="p">}</span>
 </span></code></pre></div>
-<p>For installation and configuration details, refer to the <a href="../install/">Installation Guide</a> and <a href="../configure/">Configuration Guide</a>. </p>
+<h3 id="entity-cleanup-action-schema">Entity Cleanup Action Schema</h3>
+<div class="language-typescript highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nx">schema</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="nx">input</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="nx">entity</span><span class="o">:</span><span class="w"> </span><span class="kt">z</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">z</span><span class="p">.</span><span class="nx">record</span><span class="p">(</span><span class="nx">z</span><span class="p">.</span><span class="nx">any</span><span class="p">()).</span><span class="nx">describe</span><span class="p">(</span><span class="s1">&#39;Pass through of entity object&#39;</span><span class="p">),</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">  </span><span class="p">},</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">  </span><span class="nx">output</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">    </span><span class="nx">manifest</span><span class="o">:</span><span class="w"> </span><span class="kt">z</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">z</span><span class="p">.</span><span class="kt">string</span><span class="p">().</span><span class="nx">describe</span><span class="p">(</span><span class="s1">&#39;The templated Kubernetes resource manifest&#39;</span><span class="p">),</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">    </span><span class="nx">filePath</span><span class="o">:</span><span class="w"> </span><span class="kt">z</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">z</span><span class="p">.</span><span class="kt">string</span><span class="p">().</span><span class="nx">describe</span><span class="p">(</span><span class="s1">&#39;The file path of the written manifests&#39;</span><span class="p">),</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">  </span><span class="p">},</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>For installation and configuration details, refer to the <a href="../install/">Installation Guide</a>.</p>
 
 
 

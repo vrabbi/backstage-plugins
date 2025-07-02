@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#vcf-automation-plugin" class="md-skip">
+        <a href="#vcf-automation-plugins" class="md-skip">
           Skip to content
         </a>
       
@@ -2202,29 +2202,6 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../scaffolder-actions/backend/configure/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Configure
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -2742,6 +2719,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#ingestor-plugin" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ingestor Plugin
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2795,15 +2781,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#documentation-structure" class="md-nav__link">
-    <span class="md-ellipsis">
-      Documentation Structure
-    </span>
-  </a>
   
 </li>
       
@@ -3257,6 +3234,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#ingestor-plugin" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ingestor Plugin
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -3314,15 +3300,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#documentation-structure" class="md-nav__link">
-    <span class="md-ellipsis">
-      Documentation Structure
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#prerequisites" class="md-nav__link">
     <span class="md-ellipsis">
       Prerequisites
@@ -3372,8 +3349,8 @@
   
 
 
-<h1 id="vcf-automation-plugin">VCF Automation Plugin</h1>
-<p>The VCF Automation plugin provides comprehensive visibility and management capabilities for VMware Cloud Foundation (VCF) deployments within Backstage. It enables teams to monitor deployments, manage resources, and oversee project configurations through an intuitive interface.</p>
+<h1 id="vcf-automation-plugins">VCF Automation Plugins</h1>
+<p>The VCF Automation plugins provide comprehensive visibility and management capabilities for VMware Cloud Foundation (VCF) deployments within Backstage. It enables teams to monitor deployments, manage resources, and oversee project configurations through an intuitive interface.</p>
 <h2 id="features">Features</h2>
 <ul>
 <li><strong>Deployment Monitoring</strong>: Track VCF deployment status and operations</li>
@@ -3385,19 +3362,26 @@
 </ul>
 <h2 id="plugin-components">Plugin Components</h2>
 <h3 id="frontend-plugin">Frontend Plugin</h3>
-<p>The plugin provides frontend components for:
-- Deployment visualization
-- Resource management
-- Project configuration
-- Status monitoring</p>
+<p>The plugin provides frontend components for:<br />
+- Deployment visualization<br />
+- Resource management<br />
+- Project configuration<br />
+- Status monitoring  </p>
 <p><a href="../frontend/about/">Learn more about the frontend plugin</a></p>
 <h3 id="backend-plugin">Backend Plugin</h3>
-<p>The plugin requires a backend deployment that:
-- Handles API integration
-- Manages permissions
-- Processes operations
-- Tracks resources</p>
+<p>The plugin provides a backend deployment that:<br />
+- Handles API integration<br />
+- Manages permissions<br />
+- Processes operations<br />
+- Tracks resources  </p>
 <p><a href="../backend/about/">Learn more about the backend plugin</a></p>
+<h3 id="ingestor-plugin">Ingestor Plugin</h3>
+<p>The plugin provides a backend that:<br />
+- Discovers entities in your VCF Automation environment<br />
+- Generates the relevant Backstage entities to represent the VCF Automation resources<br />
+- Adds required metadata to the generated entities to allow the frontend plugin to pull runtime data<br />
+- Adds, updates and deletes the entities in the Backstage catalog based on the current state in VCF Automation</p>
+<p><a href="../ingestor/about/">Learn more about the ingestor plugin</a></p>
 <h2 id="available-components">Available Components</h2>
 <h3 id="deployment-components">Deployment Components</h3>
 <ul>
@@ -3418,17 +3402,6 @@
 <ul>
 <li><code>VCFAutomationProjectOverview</code>: Project status overview</li>
 <li><code>VCFAutomationProjectDetails</code>: Project configuration details</li>
-</ul>
-<h2 id="documentation-structure">Documentation Structure</h2>
-<ul>
-<li>Frontend Plugin</li>
-<li><a href="../frontend/about/">About</a></li>
-<li><a href="../frontend/install/">Installation</a></li>
-<li><a href="../frontend/configure/">Configuration</a></li>
-<li>Backend Plugin</li>
-<li><a href="../backend/about/">About</a></li>
-<li><a href="../backend/install/">Installation</a></li>
-<li><a href="../backend/configure/">Configuration</a></li>
 </ul>
 <h2 id="prerequisites">Prerequisites</h2>
 <p>Before getting started, ensure you have:</p>

@@ -2202,29 +2202,6 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../scaffolder-actions/backend/configure/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Configure
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -2926,9 +2903,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-add-the-package" class="md-nav__link">
+  <a href="#1-install-the-plugin" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Add the Package
+      1. Install the Plugin
     </span>
   </a>
   
@@ -2961,33 +2938,15 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#5-configure-backend-integration" class="md-nav__link">
-    <span class="md-ellipsis">
-      5. Configure Backend Integration
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#verification" class="md-nav__link">
+  <a href="#whats-next" class="md-nav__link">
     <span class="md-ellipsis">
-      Verification
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#troubleshooting" class="md-nav__link">
-    <span class="md-ellipsis">
-      Troubleshooting
+      What's Next?
     </span>
   </a>
   
@@ -3209,9 +3168,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-add-the-package" class="md-nav__link">
+  <a href="#1-install-the-plugin" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Add the Package
+      1. Install the Plugin
     </span>
   </a>
   
@@ -3244,33 +3203,15 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#5-configure-backend-integration" class="md-nav__link">
-    <span class="md-ellipsis">
-      5. Configure Backend Integration
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#verification" class="md-nav__link">
+  <a href="#whats-next" class="md-nav__link">
     <span class="md-ellipsis">
-      Verification
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#troubleshooting" class="md-nav__link">
-    <span class="md-ellipsis">
-      Troubleshooting
+      What's Next?
     </span>
   </a>
   
@@ -3311,17 +3252,16 @@
 <h1 id="installing-the-vcf-automation-frontend-plugin">Installing the VCF Automation Frontend Plugin</h1>
 <p>This guide will help you install and set up the VCF Automation frontend plugin in your Backstage instance.</p>
 <h2 id="prerequisites">Prerequisites</h2>
-<p>Before installing the plugin, ensure you have:</p>
+<p>Before installing this plugin, ensure you have:</p>
 <ol>
-<li>A working Backstage instance</li>
-<li>VCF Automation Backend Plugin installed</li>
-<li>VCF Ingestor Plugin configured</li>
-<li>Access to VCF deployments</li>
+<li><a href="../backend/README.md">VCF Automation Backend Plugin</a> - Required for API integration</li>
+<li><a href="../ingestor/README.md">VCF Ingestor Plugin</a> - Required for entity synchronization</li>
 </ol>
 <h2 id="installation-steps">Installation Steps</h2>
-<h3 id="1-add-the-package">1. Add the Package</h3>
-<p>Install the plugin package using yarn:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>yarn<span class="w"> </span>--cwd<span class="w"> </span>packages/app<span class="w"> </span>add<span class="w"> </span>@terasky/backstage-plugin-vcf-automation
+<h3 id="1-install-the-plugin">1. Install the Plugin</h3>
+<p>Add the plugin to your Backstage project:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># From your Backstage root directory</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>yarn<span class="w"> </span>--cwd<span class="w"> </span>packages/app<span class="w"> </span>add<span class="w"> </span>@terasky/backstage-plugin-vcf-automation
 </span></code></pre></div>
 <h3 id="2-register-the-plugin">2. Register the Plugin</h3>
 <p>Add the plugin to your app's APIs in <code>packages/app/src/apis.ts</code>:</p>
@@ -3341,7 +3281,7 @@
 </span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="p">];</span>
 </span></code></pre></div>
 <h3 id="3-add-to-apptsx">3. Add to App.tsx</h3>
-<p>Configure the plugin in <code>packages/app/src/App.tsx</code>:</p>
+<p>Add the plugin to your <code>packages/app/src/App.tsx</code>:</p>
 <div class="language-typescript highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">vcfAutomationPlugin</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;@terasky/backstage-plugin-vcf-automation&#39;</span><span class="p">;</span>
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="kd">const</span><span class="w"> </span><span class="nx">app</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">createApp</span><span class="p">({</span>
@@ -3387,7 +3327,7 @@
 </span><span id="__span-3-29"><a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a><span class="w">  </span><span class="o">&lt;</span><span class="err">/EntityLayout&gt;</span>
 </span><span id="__span-3-30"><a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a><span class="p">);</span>
 </span><span id="__span-3-31"><a id="__codelineno-3-31" name="__codelineno-3-31" href="#__codelineno-3-31"></a>
-</span><span id="__span-3-32"><a id="__codelineno-3-32" name="__codelineno-3-32" href="#__codelineno-3-32"></a><span class="c1">// Add to component page switch</span>
+</span><span id="__span-3-32"><a id="__codelineno-3-32" name="__codelineno-3-32" href="#__codelineno-3-32"></a><span class="c1">// Add to your component page switch</span>
 </span><span id="__span-3-33"><a id="__codelineno-3-33" name="__codelineno-3-33" href="#__codelineno-3-33"></a><span class="kd">const</span><span class="w"> </span><span class="nx">componentPage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span>
 </span><span id="__span-3-34"><a id="__codelineno-3-34" name="__codelineno-3-34" href="#__codelineno-3-34"></a><span class="w">  </span><span class="o">&lt;</span><span class="nx">EntitySwitch</span><span class="o">&gt;</span>
 </span><span id="__span-3-35"><a id="__codelineno-3-35" name="__codelineno-3-35" href="#__codelineno-3-35"></a><span class="w">    </span><span class="o">&lt;</span><span class="nx">EntitySwitch</span><span class="p">.</span><span class="nx">Case</span><span class="w"> </span><span class="k">if</span><span class="o">=</span><span class="p">{</span><span class="nx">isComponentType</span><span class="p">(</span><span class="s1">&#39;Cloud.vSphere.Machine&#39;</span><span class="p">)}</span><span class="o">&gt;</span>
@@ -3463,7 +3403,7 @@
 </span><span id="__span-3-105"><a id="__codelineno-3-105" name="__codelineno-3-105" href="#__codelineno-3-105"></a><span class="w">  </span><span class="o">&lt;</span><span class="err">/EntitySwitch&gt;</span>
 </span><span id="__span-3-106"><a id="__codelineno-3-106" name="__codelineno-3-106" href="#__codelineno-3-106"></a><span class="p">);</span>
 </span><span id="__span-3-107"><a id="__codelineno-3-107" name="__codelineno-3-107" href="#__codelineno-3-107"></a>
-</span><span id="__span-3-108"><a id="__codelineno-3-108" name="__codelineno-3-108" href="#__codelineno-3-108"></a><span class="c1">// Update the entityPage constant</span>
+</span><span id="__span-3-108"><a id="__codelineno-3-108" name="__codelineno-3-108" href="#__codelineno-3-108"></a><span class="c1">// Update the entityPage constant to include the resource page</span>
 </span><span id="__span-3-109"><a id="__codelineno-3-109" name="__codelineno-3-109" href="#__codelineno-3-109"></a><span class="k">export</span><span class="w"> </span><span class="kd">const</span><span class="w"> </span><span class="nx">entityPage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span>
 </span><span id="__span-3-110"><a id="__codelineno-3-110" name="__codelineno-3-110" href="#__codelineno-3-110"></a><span class="w">  </span><span class="o">&lt;</span><span class="nx">EntitySwitch</span><span class="o">&gt;</span>
 </span><span id="__span-3-111"><a id="__codelineno-3-111" name="__codelineno-3-111" href="#__codelineno-3-111"></a><span class="w">    </span><span class="o">&lt;</span><span class="nx">EntitySwitch</span><span class="p">.</span><span class="nx">Case</span><span class="w"> </span><span class="k">if</span><span class="o">=</span><span class="p">{</span><span class="nx">isKind</span><span class="p">(</span><span class="s1">&#39;resource&#39;</span><span class="p">)}</span><span class="w"> </span><span class="nx">children</span><span class="o">=</span><span class="p">{</span><span class="nx">resourcePage</span><span class="p">}</span><span class="w"> </span><span class="o">/&gt;</span>
@@ -3471,48 +3411,11 @@
 </span><span id="__span-3-113"><a id="__codelineno-3-113" name="__codelineno-3-113" href="#__codelineno-3-113"></a><span class="w">  </span><span class="o">&lt;</span><span class="err">/EntitySwitch&gt;</span>
 </span><span id="__span-3-114"><a id="__codelineno-3-114" name="__codelineno-3-114" href="#__codelineno-3-114"></a><span class="p">);</span>
 </span></code></pre></div>
-<h3 id="5-configure-backend-integration">5. Configure Backend Integration</h3>
-<p>Add the following to your <code>app-config.yaml</code>:</p>
-<div class="language-yaml highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nt">vcfAutomation</span><span class="p">:</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="nt">baseUrl</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://your-vcf-automation-service</span>
-</span></code></pre></div>
-<h2 id="verification">Verification</h2>
-<p>After installation, verify that:</p>
-<ol>
-<li>The plugin appears in your package.json dependencies</li>
-<li>The API client is registered correctly</li>
-<li>Components are rendering on entity pages</li>
-<li>Backend communication is working</li>
-<li>Permissions are properly configured</li>
-</ol>
-<h2 id="troubleshooting">Troubleshooting</h2>
-<p>Common issues and solutions:</p>
-<ol>
-<li><strong>Component Not Rendering</strong></li>
-<li>Check component imports</li>
-<li>Verify entity type conditions</li>
-<li>Review route configuration</li>
-<li>
-<p>Check console errors</p>
-</li>
-<li>
-<p><strong>API Communication Issues</strong></p>
-</li>
-<li>Verify backend URL</li>
-<li>Check proxy configuration</li>
-<li>Review API client setup</li>
-<li>
-<p>Test backend connectivity</p>
-</li>
-<li>
-<p><strong>Permission Problems</strong></p>
-</li>
-<li>Check permission configuration</li>
-<li>Verify user roles</li>
-<li>Review access policies</li>
-<li>Test with admin account</li>
-</ol>
-<p>For configuration options and customization, proceed to the <a href="../configure/">Configuration Guide</a>.</p>
+<h2 id="whats-next">What's Next?</h2>
+<ul>
+<li><a href="../configure/">Configure the plugin</a></li>
+<li><a href="../about/">Learn about the plugin's features</a></li>
+</ul>
 
 
 

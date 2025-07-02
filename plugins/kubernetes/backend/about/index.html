@@ -73,6 +73,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#kubernetes-resources-permissions-backend-plugin" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -1018,6 +1023,21 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    About
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -1030,6 +1050,169 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Features
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#permission-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Permission Management
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#access-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      Access Control
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#api-endpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      API Endpoints
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#technical-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technical Architecture
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Technical Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#integration-points" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integration Points
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permission-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Permission Model
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security Considerations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integration-benefits" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integration Benefits
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Cases
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Use Cases">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#resource-access-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resource Access Control
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compliance-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compliance Management
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#team-collaboration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Team Collaboration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2209,29 +2392,6 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../scaffolder-actions/backend/configure/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Configure
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -3054,6 +3214,160 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Features
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#permission-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Permission Management
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#access-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      Access Control
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#api-endpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      API Endpoints
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#technical-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technical Architecture
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Technical Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#integration-points" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integration Points
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permission-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Permission Model
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security Considerations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integration-benefits" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integration Benefits
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Cases
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Use Cases">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#resource-access-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resource Access Control
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compliance-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compliance Management
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#team-collaboration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Team Collaboration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -3085,9 +3399,111 @@
   
 
 
-  <h1>About</h1>
-
-
+<h1 id="kubernetes-resources-permissions-backend-plugin">Kubernetes Resources Permissions Backend Plugin</h1>
+<p><a href="https://www.npmjs.com/package/@terasky/backstage-plugin-kubernetes-resources-permissions-backend"><img alt="npm latest version" src="https://img.shields.io/npm/v/@terasky/backstage-plugin-kubernetes-resources-permissions-backend/latest.svg" /></a></p>
+<h2 id="overview">Overview</h2>
+<p>The Kubernetes Resources Permissions backend plugin provides comprehensive permission management and access control for Kubernetes resources within your Backstage instance. It integrates seamlessly with Backstage's permission framework to enforce fine-grained access policies for different types of Kubernetes resources.</p>
+<h2 id="features">Features</h2>
+<h3 id="permission-management">Permission Management</h3>
+<ul>
+<li>Fine-grained access control for Kubernetes resources</li>
+</ul>
+<h3 id="access-control">Access Control</h3>
+<ul>
+<li>Resource-level permissions</li>
+<li>Action-based permissions (list, view YAML, show events)</li>
+<li>Integration with Backstage's permission framework</li>
+</ul>
+<h3 id="api-endpoints">API Endpoints</h3>
+<ul>
+<li>Permission check endpoints</li>
+<li>Resource access validation</li>
+<li>Policy enforcement endpoints</li>
+</ul>
+<h2 id="technical-architecture">Technical Architecture</h2>
+<h3 id="integration-points">Integration Points</h3>
+<ul>
+<li>Backstage Permission Framework</li>
+<li>Kubernetes Resources Frontend Plugin</li>
+</ul>
+<h3 id="permission-model">Permission Model</h3>
+<p>The plugin implements a comprehensive permission model covering:</p>
+<h4 id="permissions">Permissions:</h4>
+<ul>
+<li>List Kubernetes Resources: kubernetes-resources.resources.list<ul>
+<li>Controls whether a user can list and view Kubernetes resources</li>
+</ul>
+</li>
+<li>List Kubernetes Secrets: kubernetes-resources.secrets.list<ul>
+<li>Controls whether a user can list and view Secret resources</li>
+</ul>
+</li>
+<li>View Secret YAML: kubernetes-resources.secrets.view-yaml<ul>
+<li>Controls whether a user can view the YAML content of Secret resources</li>
+</ul>
+</li>
+<li>View Resource YAML: kubernetes-resources.yaml.view<ul>
+<li>Controls whether a user can view the YAML content of Kubernetes resources</li>
+</ul>
+</li>
+<li>View Resource Events: kubernetes-resources.events.show<ul>
+<li>Controls whether a user can view events related to Kubernetes resources</li>
+</ul>
+</li>
+<li>View Resource Graph: kubernetes-resources.graph.show<ul>
+<li>Controls whether a user can view the resource dependency graph</li>
+</ul>
+</li>
+</ul>
+<h3 id="security-considerations">Security Considerations</h3>
+<ul>
+<li>Secure permission validation</li>
+<li>Token-based authentication</li>
+<li>Role-based access control</li>
+<li>Audit logging capabilities</li>
+</ul>
+<h2 id="integration-benefits">Integration Benefits</h2>
+<ol>
+<li><strong>Enhanced Security</strong></li>
+<li>Granular access control</li>
+<li>Consistent permission enforcement</li>
+<li>
+<p>Audit trail capabilities</p>
+</li>
+<li>
+<p><strong>Improved Compliance</strong></p>
+</li>
+<li>Policy-based access control</li>
+<li>Resource usage tracking</li>
+<li>
+<p>Access pattern monitoring</p>
+</li>
+<li>
+<p><strong>Better User Experience</strong></p>
+</li>
+<li>Seamless integration with frontend</li>
+<li>Consistent permission behavior</li>
+<li>Clear access control feedback</li>
+</ol>
+<h2 id="use-cases">Use Cases</h2>
+<h3 id="resource-access-control">Resource Access Control</h3>
+<ul>
+<li>Control who can view different resource types</li>
+<li>Manage access to sensitive configurations</li>
+<li>Restrict event viewing capabilities</li>
+</ul>
+<h3 id="compliance-management">Compliance Management</h3>
+<ul>
+<li>Enforce organizational policies</li>
+<li>Track resource access patterns</li>
+<li>Maintain audit trails</li>
+</ul>
+<h3 id="team-collaboration">Team Collaboration</h3>
+<ul>
+<li>Define team-specific access levels</li>
+<li>Share resources securely</li>
+<li>Manage cross-team permissions</li>
+</ul>
 
 
 

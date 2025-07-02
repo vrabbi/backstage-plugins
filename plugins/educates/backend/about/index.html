@@ -1610,48 +1610,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#api-endpoints" class="md-nav__link">
-    <span class="md-ellipsis">
-      API Endpoints
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="API Endpoints">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#training-portals" class="md-nav__link">
-    <span class="md-ellipsis">
-      Training Portals
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#workshops" class="md-nav__link">
-    <span class="md-ellipsis">
-      Workshops
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#sessions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Sessions
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#technical-details" class="md-nav__link">
     <span class="md-ellipsis">
       Technical Details
@@ -1725,39 +1683,6 @@
   <a href="#data-flow" class="md-nav__link">
     <span class="md-ellipsis">
       Data Flow
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#integration-examples" class="md-nav__link">
-    <span class="md-ellipsis">
-      Integration Examples
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Integration Examples">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#portal-communication" class="md-nav__link">
-    <span class="md-ellipsis">
-      Portal Communication
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#session-management" class="md-nav__link">
-    <span class="md-ellipsis">
-      Session Management
     </span>
   </a>
   
@@ -2457,29 +2382,6 @@
   
   <span class="md-ellipsis">
     Install
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../scaffolder-actions/backend/configure/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Configure
     
   </span>
   
@@ -3382,48 +3284,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#api-endpoints" class="md-nav__link">
-    <span class="md-ellipsis">
-      API Endpoints
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="API Endpoints">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#training-portals" class="md-nav__link">
-    <span class="md-ellipsis">
-      Training Portals
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#workshops" class="md-nav__link">
-    <span class="md-ellipsis">
-      Workshops
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#sessions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Sessions
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#technical-details" class="md-nav__link">
     <span class="md-ellipsis">
       Technical Details
@@ -3507,39 +3367,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#integration-examples" class="md-nav__link">
-    <span class="md-ellipsis">
-      Integration Examples
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Integration Examples">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#portal-communication" class="md-nav__link">
-    <span class="md-ellipsis">
-      Portal Communication
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#session-management" class="md-nav__link">
-    <span class="md-ellipsis">
-      Session Management
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -3596,38 +3423,11 @@
 <li>Workshop catalog retrieval</li>
 <li>Workshop metadata handling</li>
 <li>Session creation and tracking</li>
-<li>Resource cleanup</li>
 </ul>
 <h3 id="multi-portal-support">Multi-Portal Support</h3>
 <ul>
-<li>Multiple portal configurations</li>
-<li>Portal health monitoring</li>
-<li>Load balancing capabilities</li>
-<li>Portal-specific settings</li>
+<li>Multiple portal configurations out of the box</li>
 </ul>
-<h2 id="api-endpoints">API Endpoints</h2>
-<p>The plugin exposes the following REST endpoints:</p>
-<h3 id="training-portals">Training Portals</h3>
-<p><div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>GET /api/educates/training-portals
-</span></code></pre></div>
-Lists all configured training portals and their status.</p>
-<h3 id="workshops">Workshops</h3>
-<p><div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>GET /api/educates/training-portals/:portalName/workshops
-</span></code></pre></div>
-Retrieves the workshop catalog from a specific portal.</p>
-<p><div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>GET /api/educates/training-portals/:portalName/workshops/:workshopName
-</span></code></pre></div>
-Gets detailed information about a specific workshop.</p>
-<h3 id="sessions">Sessions</h3>
-<p><div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>POST /api/educates/training-portals/:portalName/workshops/:workshopName/sessions
-</span></code></pre></div>
-Creates a new workshop session.</p>
-<p><div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>GET /api/educates/training-portals/:portalName/workshops/:workshopName/sessions/:sessionId
-</span></code></pre></div>
-Retrieves the status of a specific session.</p>
-<p><div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>DELETE /api/educates/training-portals/:portalName/workshops/:workshopName/sessions/:sessionId
-</span></code></pre></div>
-Terminates a workshop session.</p>
 <h2 id="technical-details">Technical Details</h2>
 <h3 id="integration-points">Integration Points</h3>
 <ul>
@@ -3679,9 +3479,8 @@ Terminates a workshop session.</p>
 <p><strong>Session Controller</strong></p>
 </li>
 <li>Session lifecycle</li>
-<li>Resource allocation</li>
 <li>
-<p>Cleanup processes</p>
+<p>Resource allocation</p>
 </li>
 <li>
 <p><strong>Authentication Handler</strong></p>
@@ -3698,22 +3497,6 @@ Terminates a workshop session.</p>
 <li>Response processing</li>
 <li>Result returned to client</li>
 </ol>
-<h2 id="integration-examples">Integration Examples</h2>
-<h3 id="portal-communication">Portal Communication</h3>
-<div class="language-typescript highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">getWorkshops</span><span class="p">(</span><span class="nx">portalName</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nb">Promise</span><span class="o">&lt;</span><span class="nx">Workshop</span><span class="p">[]</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">portal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">portalManager</span><span class="p">.</span><span class="nx">getPortal</span><span class="p">(</span><span class="nx">portalName</span><span class="p">);</span>
-</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">portal</span><span class="p">.</span><span class="nx">listWorkshops</span><span class="p">();</span>
-</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="p">}</span>
-</span></code></pre></div>
-<h3 id="session-management">Session Management</h3>
-<div class="language-typescript highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">createSession</span><span class="p">(</span>
-</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">  </span><span class="nx">portalName</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span>
-</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">  </span><span class="nx">workshopName</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span>
-</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nb">Promise</span><span class="o">&lt;</span><span class="nx">WorkshopSession</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">portal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">portalManager</span><span class="p">.</span><span class="nx">getPortal</span><span class="p">(</span><span class="nx">portalName</span><span class="p">);</span>
-</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">portal</span><span class="p">.</span><span class="nx">createSession</span><span class="p">(</span><span class="nx">workshopName</span><span class="p">);</span>
-</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="p">}</span>
-</span></code></pre></div>
 <p>For installation and configuration details, refer to the <a href="../install/">Installation Guide</a> and <a href="../configure/">Configuration Guide</a>.</p>
 
 
